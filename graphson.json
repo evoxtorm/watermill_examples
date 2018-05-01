@@ -1,0 +1,49 @@
+{
+  "graph": {
+    "mode": "NORMAL",
+    "vertices": [
+      {
+        "_id": "0d98bed9ffd2426f64c9106737c473a2e7b27d1eb42543d4629ea90a58de641d",
+        "_type": "vertex",
+        "values": {
+          "type": "collection/add-output",
+          "name": "Capitalize alphabet",
+          "resolvedOutput": "/home/evoxtorm/bionode-watermill-tutorial/data/0d98bed/new.output.fas",
+          "params": {}
+        }
+      },
+      {
+        "_id": "8b64ac06363171d671126b4e6f3d04575486f478f0ec4516f8f9c8d48bc694a3",
+        "_type": "vertex",
+        "values": {
+          "type": "collection/add-output",
+          "name": "Capitalize alphabet",
+          "resolvedOutput": "/home/evoxtorm/bionode-watermill-tutorial/data/8b64ac0/new.output.fas",
+          "params": {}
+        }
+      },
+      {
+        "_id": "fc7a47d6263b4e2e06fd578611f7a5b797eed5d60611c1ef70b32d9458ba37b7",
+        "_type": "vertex",
+        "values": {
+          "type": "collection/add-output",
+          "name": "Capitalize alphabet",
+          "resolvedOutput": "/home/evoxtorm/bionode-watermill-tutorial/data/fc7a47d/new.output.fas",
+          "params": {}
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "0d98bed9ffd2426f64c9106737c473a2e7b27d1eb42543d4629ea90a58de641d",
+        "target": "8b64ac06363171d671126b4e6f3d04575486f478f0ec4516f8f9c8d48bc694a3",
+        "_type": "edge"
+      },
+      {
+        "source": "0d98bed9ffd2426f64c9106737c473a2e7b27d1eb42543d4629ea90a58de641d",
+        "target": "fc7a47d6263b4e2e06fd578611f7a5b797eed5d60611c1ef70b32d9458ba37b7",
+        "_type": "edge"
+      }
+    ]
+  }
+}

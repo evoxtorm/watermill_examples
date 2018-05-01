@@ -1,0 +1,18 @@
+{
+  "graph": {
+    "mode": "NORMAL",
+    "vertices": [
+      {
+        "_id": "51929b4e11bf7ce12195a72117ce364c0b6f26715bdc89139322683b6d94661f",
+        "_type": "vertex",
+        "values": {
+          "type": "collection/add-output",
+          "name": "This is the task name",
+          "resolvedOutput": "/home/evoxtorm/bionode-watermill-tutorial/js_standard_tutorial/data/51929b4/test_file.fas",
+          "params": "test_file.fas"
+        }
+      }
+    ],
+    "edges": []
+  }
+}
