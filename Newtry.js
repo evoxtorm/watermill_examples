@@ -22,14 +22,14 @@ const concatTask = task({
   }
 )
 
-concatTask()
+//concatTask()
 
 const myTask = task({
   input: '*concat.fas',
   output:'*.output.fas',
   name: 'Capitalize sequence'
 }, ({ input }) => {
-    fs.createReadStream(input)
+    return fs.createReadStream(input)
       .pipe(through(function (chunk, enc, next) {
         this.push(chunk.toString().toUpperCase())
 
