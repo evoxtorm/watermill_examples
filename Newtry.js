@@ -39,7 +39,7 @@ const myTask = task({
   }
 )
 
-myTask()
+// myTask()
 
-// const pipeline = join(concatTask, myTask)
-//  pipeline()
+const pipeline = join(concatTask, myTask)
+ pipeline()
