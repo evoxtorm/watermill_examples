@@ -19,17 +19,27 @@ const concatTask = task({
   console.log('input_directory: ', object.dir)
   console.log('input_variable: ', object, object.params)
   return `cat ${object.input.join(' ')} > ${object.params.output}`
-  }, ({ object }) => {
-      fs.createReadStream(object)
+  }
+)
+
+concatTask()
+
+const myTask = task({
+  input: '*concat.fas',
+  output:'*.output.fas',
+  name: 'Capitalize sequence'
+}, ({ input }) => {
+    fs.createReadStream(input)
       .pipe(through(function (chunk, enc, next) {
         this.push(chunk.toString().toUpperCase())
 
         next()
       }))
-      .pipe(fs.createWriteStream(object.split('/').slice(0, -1).join('/') + '/new.concat.fas'))
+      .pipe(fs.createWriteStream(input.split('/').slice(0, -1).join('/') + '/new.output.fas'))
   }
 )
 
+myTask()
 
-concatTask()
-
+// const pipeline = join(concatTask, myTask)
+//  pipeline()
