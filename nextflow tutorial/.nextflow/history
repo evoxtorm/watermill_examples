@@ -1,1 +1,6 @@
 2018-05-12 20:54:12	1s	lethal_pasteur	OK	f92101ecfa67c5b1ba88bfbfc38c092c	d77304fe-9f05-49f3-9d71-3f27dd88b3e7	nextflow run basic_read_write.nf
+2018-05-22 13:08:06	7.1s	hopeful_waddington	OK	8de886f42c7a499a003711349d1fcd17	cecf9f62-9229-4f45-bc2e-50503923c3da	nextflow run helloworld.nf
+2018-05-22 13:08:45	2.5s	astonishing_volhard	ERR	5402cb681c7e04b8fb61c19d6974335e	db409953-bfca-4818-b3c2-0d8af59ae1aa	nextflow run jstest.nf
+2018-05-22 13:10:19	3.4s	trusting_lorenz	OK	59602490cb0f67d1b9a7aee8d940e600	fe689951-d9d5-49b0-a4dc-edd5a01a5a9c	nextflow run jstest.nf
+2018-05-22 13:14:53	4.4s	jolly_meninsky	OK	2433b876cefa84a066e894c3748c6a9c	3ce2eef6-0c17-41a1-94eb-fe76a1e0cccb	nextflow run jstest.nf
+2018-05-22 13:15:37	3.4s	big_nobel	OK	2433b876cefa84a066e894c3748c6a9c	e1bc087b-7bc0-4580-8b6b-06ea6dbc2b30	nextflow run jstest.nf
