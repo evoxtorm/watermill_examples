@@ -4,3 +4,4 @@
 2018-05-22 13:10:19	3.4s	trusting_lorenz	OK	59602490cb0f67d1b9a7aee8d940e600	fe689951-d9d5-49b0-a4dc-edd5a01a5a9c	nextflow run jstest.nf
 2018-05-22 13:14:53	4.4s	jolly_meninsky	OK	2433b876cefa84a066e894c3748c6a9c	3ce2eef6-0c17-41a1-94eb-fe76a1e0cccb	nextflow run jstest.nf
 2018-05-22 13:15:37	3.4s	big_nobel	OK	2433b876cefa84a066e894c3748c6a9c	e1bc087b-7bc0-4580-8b6b-06ea6dbc2b30	nextflow run jstest.nf
+2018-05-22 18:31:50	3.3s	jovial_ramanujan	OK	47ab5cf4e89bb1f87d6d46a2ecfa2f2c	9391f2a3-c928-4790-8aaf-6af23def2625	nextflow run nativeExecution.nf
