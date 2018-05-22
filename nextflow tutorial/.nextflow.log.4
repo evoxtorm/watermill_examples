@@ -1,69 +1,44 @@
-May-22 13:08:44.637 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run jstest.nf
-May-22 13:08:44.876 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
-May-22 13:08:44.898 [main] INFO  nextflow.cli.CmdRun - Launching `jstest.nf` [astonishing_volhard] - revision: 5402cb681c
-May-22 13:08:45.098 [main] DEBUG nextflow.Session - Session uuid: db409953-bfca-4818-b3c2-0d8af59ae1aa
-May-22 13:08:45.098 [main] DEBUG nextflow.Session - Run name: astonishing_volhard
-May-22 13:08:45.103 [main] DEBUG nextflow.Session - Executor pool size: 4
-May-22 13:08:45.129 [main] DEBUG nextflow.cli.CmdRun - 
+May-22 13:10:19.316 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run jstest.nf
+May-22 13:10:19.545 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
+May-22 13:10:19.564 [main] INFO  nextflow.cli.CmdRun - Launching `jstest.nf` [trusting_lorenz] - revision: 59602490cb
+May-22 13:10:19.776 [main] DEBUG nextflow.Session - Session uuid: fe689951-d9d5-49b0-a4dc-edd5a01a5a9c
+May-22 13:10:19.776 [main] DEBUG nextflow.Session - Run name: trusting_lorenz
+May-22 13:10:19.781 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-22 13:10:19.807 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 0.29.0 build 4803
   Modified: 24-04-2018 08:09 UTC (13:39 IDT)
   System: Linux 4.15.0-21-generic
   Runtime: Groovy 2.4.15 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_171-b11
   Encoding: UTF-8 (UTF-8)
-  Process: 18511@evoxtorm-Inspiron-3542 [127.0.1.1]
-  CPUs: 4 - Mem: 3.8 GB (155.6 MB) - Swap: 2 GB (2 GB)
-May-22 13:08:45.266 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
+  Process: 18756@evoxtorm-Inspiron-3542 [127.0.1.1]
+  CPUs: 4 - Mem: 3.8 GB (116.9 MB) - Swap: 2 GB (2 GB)
+May-22 13:10:19.964 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
 
-May-22 13:08:45.267 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
-May-22 13:08:45.268 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
-May-22 13:08:45.616 [main] DEBUG nextflow.Session - Session start invoked
-May-22 13:08:45.633 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
-May-22 13:08:45.635 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
-May-22 13:08:46.072 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-May-22 13:08:46.182 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-22 13:08:46.183 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-22 13:08:46.196 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-22 13:08:46.201 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
-May-22 13:08:46.210 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
-May-22 13:08:46.219 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
-May-22 13:08:46.221 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-May-22 13:08:46.224 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
-May-22 13:08:46.387 [main] DEBUG nextflow.Session - >>> barrier register (process: jsstuff)
-May-22 13:08:46.395 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > jsstuff -- maxForks: 4
-May-22 13:08:46.467 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-May-22 13:08:46.468 [main] DEBUG nextflow.Session - Session await
-May-22 13:08:47.000 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-May-22 13:08:47.011 [Task submitter] INFO  nextflow.Session - [4e/49a6d2] Submitted process > jsstuff
-May-22 13:08:47.162 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: jsstuff; status: COMPLETED; exit: 127; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/4e/49a6d20f4fea7d603db4c2fd7c0421]
-May-22 13:08:47.259 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'jsstuff'
-
-Caused by:
-  Process `jsstuff` terminated with an error exit status (127)
-
-Command executed:
-
-  #!/usr/bin/env javascript
-  
-  console.log(" Hii it's me ");
-
-Command exit status:
-  127
-
-Command output:
-  (empty)
-
-Command error:
-  /usr/bin/env: ‘javascript’: No such file or directory
-
-Work dir:
-  /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/4e/49a6d20f4fea7d603db4c2fd7c0421
-
-Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
-May-22 13:08:47.272 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: jsstuff)
-May-22 13:08:47.275 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `jsstuff` terminated with an error exit status (127)
-May-22 13:08:47.282 [main] DEBUG nextflow.Session - Session await > all process finished
-May-22 13:08:47.326 [main] DEBUG nextflow.Session - Session await > all barriers passed
-May-22 13:08:47.339 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
-May-22 13:08:47.378 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=2ms; cachedDuration=0ms]
-May-22 13:08:47.474 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-May-22 13:08:47.490 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+May-22 13:10:19.965 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
+May-22 13:10:19.965 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
+May-22 13:10:20.193 [main] DEBUG nextflow.Session - Session start invoked
+May-22 13:10:20.209 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-22 13:10:20.210 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-22 13:10:20.698 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-22 13:10:20.815 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-22 13:10:20.816 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-22 13:10:20.830 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-22 13:10:20.835 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-22 13:10:20.845 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+May-22 13:10:20.853 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+May-22 13:10:20.855 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-22 13:10:20.859 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-22 13:10:21.038 [main] DEBUG nextflow.Session - >>> barrier register (process: jsstuff)
+May-22 13:10:21.045 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > jsstuff -- maxForks: 4
+May-22 13:10:21.113 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-22 13:10:21.113 [main] DEBUG nextflow.Session - Session await
+May-22 13:10:21.737 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-22 13:10:21.749 [Task submitter] INFO  nextflow.Session - [c7/9638fe] Submitted process > jsstuff
+May-22 13:10:22.217 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: jsstuff; status: COMPLETED; exit: 0; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/c7/9638fed409ad3fbe1cb626b88ec267]
+May-22 13:10:22.236 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: jsstuff)
+May-22 13:10:22.238 [main] DEBUG nextflow.Session - Session await > all process finished
+May-22 13:10:22.303 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-22 13:10:22.303 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-22 13:10:22.349 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=313ms; failedDuration=0ms; cachedDuration=0ms]
+May-22 13:10:22.386 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-22 13:10:22.401 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
