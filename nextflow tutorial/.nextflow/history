@@ -9,3 +9,5 @@
 2018-05-22 20:48:13	2.2s	backstabbing_sax	OK	3ad1853e128e7e4317224c97d0db8e39	5c25c641-2f71-448a-8b26-1a7c456cc9ba	nextflow run fasta_record.nf
 2018-05-23 22:59:08	-	marvelous_dijkstra	-	e9aa97dc2acf8369c2c6b3611bed49c6	8a52b118-f812-4724-91cc-2e89e71e8032	nextflow run twomappersnf.nf
 2018-05-23 23:26:33	1m 17s	confident_sanger	OK	fd5c8cbed9688f1a4c4891457da41990	46ca7a5d-2a14-4cc0-9946-62c37d96dd54	nextflow run twomappersnf.nf
+2018-05-23 23:35:23	-	wise_lamarr	-	a877c15fcb209dc31bba8fd8a593bedb	5736f1e8-9295-47cb-be6f-a9b73002e229	nextflow run twomappersnf.nf
+2018-05-23 23:35:50	11s	lonely_legentil	ERR	ec5fb943ef4f06bdc223d51827787610	5f7701b7-b556-4541-9459-2c03b85222d7	nextflow run twomappersnf.nf

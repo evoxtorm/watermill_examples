@@ -35,7 +35,7 @@ process downloadSRA {
   """
 }
 
-=== EXTRACT/DECOMPRESS ===
+//=== EXTRACT/DECOMPRESS ===
 
 process fastaqDump {
 	container 'inutano/sra-toolkit'
@@ -60,7 +60,7 @@ process gunzipit {
 	output: file 'reference.genomic.fna' into referenceGenomes
 
 	"""
-	gunzip -c ${input} > reference.genomic.fna
+	gunzip -c $referenceGenome > reference.genomic.fna
 	"""
 }
 
