@@ -11,3 +11,5 @@
 2018-05-23 23:26:33	1m 17s	confident_sanger	OK	fd5c8cbed9688f1a4c4891457da41990	46ca7a5d-2a14-4cc0-9946-62c37d96dd54	nextflow run twomappersnf.nf
 2018-05-23 23:35:23	-	wise_lamarr	-	a877c15fcb209dc31bba8fd8a593bedb	5736f1e8-9295-47cb-be6f-a9b73002e229	nextflow run twomappersnf.nf
 2018-05-23 23:35:50	11s	lonely_legentil	ERR	ec5fb943ef4f06bdc223d51827787610	5f7701b7-b556-4541-9459-2c03b85222d7	nextflow run twomappersnf.nf
+2018-05-23 23:40:37	9.8s	gigantic_chandrasekhar	ERR	a39194cd121a9bb7ef3dce47b7910cf3	62f0f762-9dd7-4178-8241-75ed232c798f	nextflow run twomappersnf.nf
+2018-05-23 23:43:59	9.3s	silly_hilbert	ERR	809ec6272861eab9113eb347317fa77b	88164114-b95f-4b9a-8070-f26635d68f66	nextflow run twomappersnf.nf

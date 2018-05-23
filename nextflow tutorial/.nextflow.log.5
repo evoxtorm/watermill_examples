@@ -1,29 +1,35 @@
-May-22 19:30:24.614 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run read_fasta.nf
-May-22 19:30:25.007 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
-May-22 19:30:25.084 [main] INFO  nextflow.cli.CmdRun - Launching `read_fasta.nf` [big_gilbert] - revision: 0d28e8e5cd
-May-22 19:30:25.443 [main] DEBUG nextflow.Session - Session uuid: ac6afd06-b22d-498b-a301-980719cbe1e1
-May-22 19:30:25.444 [main] DEBUG nextflow.Session - Run name: big_gilbert
-May-22 19:30:25.449 [main] DEBUG nextflow.Session - Executor pool size: 4
-May-22 19:30:25.557 [main] DEBUG nextflow.cli.CmdRun - 
+May-23 22:59:07.328 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run twomappersnf.nf
+May-23 22:59:07.732 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
+May-23 22:59:07.812 [main] INFO  nextflow.cli.CmdRun - Launching `twomappersnf.nf` [marvelous_dijkstra] - revision: e9aa97dc2a
+May-23 22:59:08.146 [main] DEBUG nextflow.Session - Session uuid: 8a52b118-f812-4724-91cc-2e89e71e8032
+May-23 22:59:08.146 [main] DEBUG nextflow.Session - Run name: marvelous_dijkstra
+May-23 22:59:08.151 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-23 22:59:08.317 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 0.29.0 build 4803
   Modified: 24-04-2018 08:09 UTC (13:39 IDT)
   System: Linux 4.15.0-21-generic
   Runtime: Groovy 2.4.15 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_171-b11
   Encoding: UTF-8 (UTF-8)
-  Process: 23215@evoxtorm-Inspiron-3542 [127.0.1.1]
-  CPUs: 4 - Mem: 3.8 GB (467.4 MB) - Swap: 2 GB (1.9 GB)
-May-22 19:30:25.834 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
+  Process: 11681@evoxtorm-Inspiron-3542 [127.0.1.1]
+  CPUs: 4 - Mem: 3.8 GB (413.8 MB) - Swap: 2 GB (1.9 GB)
+May-23 22:59:08.594 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
 
-May-22 19:30:25.835 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
-May-22 19:30:25.835 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
-May-22 19:30:26.215 [main] DEBUG nextflow.Session - Session start invoked
-May-22 19:30:26.229 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
-May-22 19:30:26.230 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
-May-22 19:30:27.085 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-May-22 19:30:27.153 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-May-22 19:30:27.154 [main] DEBUG nextflow.Session - Session await
-May-22 19:30:27.154 [main] DEBUG nextflow.Session - Session await > all process finished
-May-22 19:30:27.154 [main] DEBUG nextflow.Session - Session await > all barriers passed
-May-22 19:30:27.204 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms]
-May-22 19:30:27.285 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-May-22 19:30:27.342 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+May-23 22:59:08.594 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
+May-23 22:59:08.594 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
+May-23 22:59:09.026 [main] DEBUG nextflow.Session - Session start invoked
+May-23 22:59:09.041 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-23 22:59:09.043 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-23 22:59:10.036 [main] DEBUG nextflow.Session - Session aborted -- Cause: startup failed:
+_nf_script_94368294: 80: Invalid process definition -- Make sure the process ends with a script wrapped by quote characters @ line 80, column 1.
+   process indexReferenceBowtie2 {
+   ^
+
+1 error
+
+May-23 22:59:10.423 [main] ERROR nextflow.cli.Launcher - startup failed:
+_nf_script_94368294: 80: Invalid process definition -- Make sure the process ends with a script wrapped by quote characters @ line 80, column 1.
+   process indexReferenceBowtie2 {
+   ^
+
+1 error
+

@@ -60,7 +60,7 @@ process gunzipit {
 	output: file 'reference.genomic.fna' into referenceGenomes
 
 	"""
-	gunzip -c $referenceGenome > reference.genomic.fna
+	bgzip -d $referenceGenome --stdout > reference.genomic.fna
 	"""
 }
 
