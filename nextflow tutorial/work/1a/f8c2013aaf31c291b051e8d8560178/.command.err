@@ -1,0 +1,16 @@
+Unable to find image 'appropriate/curl:latest' locally
+latest: Pulling from appropriate/curl
+ff3a5c916c92: Already exists
+3151abf94102: Pulling fs layer
+58ae3cb4aac4: Pulling fs layer
+58ae3cb4aac4: Verifying Checksum
+58ae3cb4aac4: Download complete
+3151abf94102: Verifying Checksum
+3151abf94102: Download complete
+3151abf94102: Pull complete
+58ae3cb4aac4: Pull complete
+Digest: sha256:c8bf5bbec6397465a247c2bb3e589bb77e4f62ff88a027175ecb2d9e4f12c9d7
+Status: Downloaded newer image for appropriate/curl:latest
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   329  100   329    0     0    636      0 --:--:-- --:--:-- --:--:--   635100   329  100   329    0     0    635      0 --:--:-- --:--:-- --:--:--   633

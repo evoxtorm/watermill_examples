@@ -7,3 +7,5 @@
 2018-05-22 18:31:50	3.3s	jovial_ramanujan	OK	47ab5cf4e89bb1f87d6d46a2ecfa2f2c	9391f2a3-c928-4790-8aaf-6af23def2625	nextflow run nativeExecution.nf
 2018-05-22 19:30:25	2.3s	big_gilbert	OK	0d28e8e5cd97ae8fc1ad351d496d8462	ac6afd06-b22d-498b-a301-980719cbe1e1	nextflow run read_fasta.nf
 2018-05-22 20:48:13	2.2s	backstabbing_sax	OK	3ad1853e128e7e4317224c97d0db8e39	5c25c641-2f71-448a-8b26-1a7c456cc9ba	nextflow run fasta_record.nf
+2018-05-23 22:59:08	-	marvelous_dijkstra	-	e9aa97dc2acf8369c2c6b3611bed49c6	8a52b118-f812-4724-91cc-2e89e71e8032	nextflow run twomappersnf.nf
+2018-05-23 23:26:33	1m 17s	confident_sanger	OK	fd5c8cbed9688f1a4c4891457da41990	46ca7a5d-2a14-4cc0-9946-62c37d96dd54	nextflow run twomappersnf.nf
