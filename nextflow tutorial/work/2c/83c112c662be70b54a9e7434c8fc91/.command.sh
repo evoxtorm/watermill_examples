@@ -1,0 +1,2 @@
+#!/bin/bash -ue
+docker run -i -v /home/evoxtorm/Desktop/watermill_examples/nextflow\ tutorial/work/2c/83c112c662be70b54a9e7434c8fc91:/home/evoxtorm/Desktop/watermill_examples/nextflow\ tutorial/work/2c/83c112c662be70b54a9e7434c8fc91 -v "$PWD":"$PWD" -w "$PWD" --name $NXF_BOXID appropriate/curl http://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/045/GCF_000007045.1_ASM704v1/GCF_000007045.1_ASM704v1_genomic.fna.gz -o reference.genomic.fna.gz

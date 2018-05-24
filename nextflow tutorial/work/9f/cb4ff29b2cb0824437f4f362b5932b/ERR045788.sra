@@ -1,0 +1,1 @@
+/home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/9c/43d27892f29959374cd1f83b535e6a/113055/ERR045788.sra

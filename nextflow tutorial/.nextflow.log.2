@@ -1,86 +1,86 @@
-May-23 23:35:49.901 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run twomappersnf.nf
-May-23 23:35:50.126 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
-May-23 23:35:50.149 [main] INFO  nextflow.cli.CmdRun - Launching `twomappersnf.nf` [lonely_legentil] - revision: ec5fb943ef
-May-23 23:35:50.349 [main] DEBUG nextflow.Session - Session uuid: 5f7701b7-b556-4541-9459-2c03b85222d7
-May-23 23:35:50.349 [main] DEBUG nextflow.Session - Run name: lonely_legentil
-May-23 23:35:50.353 [main] DEBUG nextflow.Session - Executor pool size: 4
-May-23 23:35:50.376 [main] DEBUG nextflow.cli.CmdRun - 
+May-24 12:35:09.874 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run twomappersnf.nf
+May-24 12:35:10.246 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
+May-24 12:35:10.313 [main] INFO  nextflow.cli.CmdRun - Launching `twomappersnf.nf` [tiny_ramanujan] - revision: b28a25c78f
+May-24 12:35:10.655 [main] DEBUG nextflow.Session - Session uuid: 9cee94a1-ca32-4c60-8333-f0f841bcbb48
+May-24 12:35:10.656 [main] DEBUG nextflow.Session - Run name: tiny_ramanujan
+May-24 12:35:10.660 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-24 12:35:10.773 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 0.29.0 build 4803
   Modified: 24-04-2018 08:09 UTC (13:39 IDT)
   System: Linux 4.15.0-21-generic
   Runtime: Groovy 2.4.15 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_171-b11
   Encoding: UTF-8 (UTF-8)
-  Process: 13423@evoxtorm-Inspiron-3542 [127.0.1.1]
-  CPUs: 4 - Mem: 3.8 GB (143.9 MB) - Swap: 2 GB (1.9 GB)
-May-23 23:35:50.505 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
+  Process: 21872@evoxtorm-Inspiron-3542 [127.0.1.1]
+  CPUs: 4 - Mem: 3.8 GB (351.3 MB) - Swap: 2 GB (1.9 GB)
+May-24 12:35:10.995 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
 
-May-23 23:35:50.505 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
-May-23 23:35:50.506 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
-May-23 23:35:50.728 [main] DEBUG nextflow.Session - Session start invoked
-May-23 23:35:50.744 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
-May-23 23:35:50.745 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
-May-23 23:35:51.316 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-May-23 23:35:51.493 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-23 23:35:51.494 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-23 23:35:51.510 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-23 23:35:51.516 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
-May-23 23:35:51.526 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
-May-23 23:35:51.536 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
-May-23 23:35:51.538 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-May-23 23:35:51.543 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
-May-23 23:35:51.688 [main] DEBUG nextflow.Session - >>> barrier register (process: downloadReference)
-May-23 23:35:51.694 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > downloadReference -- maxForks: 4
-May-23 23:35:52.108 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-23 23:35:52.108 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-23 23:35:52.109 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-23 23:35:52.110 [main] DEBUG nextflow.Session - >>> barrier register (process: downloadSRA)
-May-23 23:35:52.111 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > downloadSRA -- maxForks: 4
-May-23 23:35:52.123 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-23 23:35:52.124 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-23 23:35:52.125 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-23 23:35:52.126 [main] DEBUG nextflow.Session - >>> barrier register (process: fastaqDump)
-May-23 23:35:52.127 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastaqDump -- maxForks: 4
-May-23 23:35:52.141 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-23 23:35:52.144 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-23 23:35:52.147 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-23 23:35:52.152 [main] DEBUG nextflow.Session - >>> barrier register (process: gunzipit)
-May-23 23:35:52.154 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > gunzipit -- maxForks: 4
-May-23 23:35:52.161 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-May-23 23:35:52.161 [main] DEBUG nextflow.Session - Session await
-May-23 23:35:52.307 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-May-23 23:35:52.317 [Task submitter] INFO  nextflow.Session - [83/ba91d1] Submitted process > downloadSRA (1)
-May-23 23:35:52.381 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Process `downloadReference (1)` uses an executable container -- This feature has been deprecated and will be removed in a future release
-May-23 23:35:52.441 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-May-23 23:35:52.449 [Task submitter] INFO  nextflow.Session - [2c/e3a432] Submitted process > downloadReference (1)
-May-23 23:36:00.693 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: downloadReference (1); status: COMPLETED; exit: 0; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/2c/e3a43200df7395bb0362148ae0ab41]
-May-23 23:36:00.744 [Actor Thread 8] DEBUG nextflow.Session - <<< barrier arrive (process: downloadReference)
-May-23 23:36:00.791 [Actor Thread 1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'gunzipit (1)'
+May-24 12:35:10.996 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
+May-24 12:35:10.997 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
+May-24 12:35:11.570 [main] DEBUG nextflow.Session - Session start invoked
+May-24 12:35:11.584 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-24 12:35:11.585 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-24 12:35:12.380 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-24 12:35:12.599 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-24 12:35:12.599 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-24 12:35:12.610 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-24 12:35:12.615 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-24 12:35:12.637 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+May-24 12:35:12.657 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+May-24 12:35:12.658 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-24 12:35:12.664 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-24 12:35:12.926 [main] DEBUG nextflow.Session - >>> barrier register (process: downloadReference)
+May-24 12:35:12.933 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > downloadReference -- maxForks: 4
+May-24 12:35:13.338 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-24 12:35:13.339 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-24 12:35:13.349 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-24 12:35:13.351 [main] DEBUG nextflow.Session - >>> barrier register (process: downloadSRA)
+May-24 12:35:13.351 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > downloadSRA -- maxForks: 4
+May-24 12:35:13.375 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-24 12:35:13.376 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-24 12:35:13.376 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-24 12:35:13.377 [main] DEBUG nextflow.Session - >>> barrier register (process: fastaqDump)
+May-24 12:35:13.378 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastaqDump -- maxForks: 4
+May-24 12:35:13.391 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-24 12:35:13.391 [main] DEBUG nextflow.Session - Session await
+May-24 12:35:13.691 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-24 12:35:13.710 [Task submitter] INFO  nextflow.Session - [04/5e2bbf] Submitted process > downloadSRA (1)
+May-24 12:35:13.763 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Process `downloadReference (1)` uses an executable container -- This feature has been deprecated and will be removed in a future release
+May-24 12:35:13.812 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-24 12:35:13.813 [Task submitter] INFO  nextflow.Session - [b2/aa8a7b] Submitted process > downloadReference (1)
+May-24 12:35:26.869 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: downloadReference (1); status: COMPLETED; exit: 0; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/b2/aa8a7b7f481c7f57bed36cdd21ecb2]
+May-24 12:35:26.916 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: downloadReference)
+May-24 12:35:38.758 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: downloadSRA (1); status: COMPLETED; exit: 0; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/04/5e2bbfe7b2cd09c902477ca27971ed]
+May-24 12:35:38.782 [Actor Thread 7] DEBUG nextflow.Session - <<< barrier arrive (process: downloadSRA)
+May-24 12:35:38.816 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-24 12:35:38.817 [Task submitter] INFO  nextflow.Session - [69/e8a43d] Submitted process > fastaqDump (1)
+May-24 12:35:38.865 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: fastaqDump (1); status: COMPLETED; exit: 127; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/69/e8a43dcec31832a7f587c39a458c02]
+May-24 12:35:38.932 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'fastaqDump (1)'
 
 Caused by:
-  Unknown variable 'input' -- Make sure you didn't misspell it or define somewhere in the script before use it
+  Process `fastaqDump (1)` terminated with an error exit status (127)
 
-Source block:
-  """
-  gunzip -c ${input} > reference.genomic.fna
-  """
+Command executed:
 
-Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
-May-23 23:36:00.803 [Actor Thread 1] DEBUG nextflow.Session - Session aborted -- Cause: Process `null` script contains error(s)
-May-23 23:36:00.867 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
-May-23 23:36:00.873 [Actor Thread 1] DEBUG nextflow.Session - The following nodes are still active:
-[process] fastaqDump
-  status=ACTIVE
-  port 0: (queue) OPEN; channel: read
-  port 1: (cntrl) OPEN; channel: $
+  fastq-dump --split-files --skip-technical --gzip ERR045788.sra
 
-[process] gunzipit
-  status=ACTIVE
-  port 0: (queue) CLOSED; channel: referenceGenome
-  port 1: (cntrl) OPEN; channel: $
+Command exit status:
+  127
 
-May-23 23:36:00.878 [main] DEBUG nextflow.Session - Session await > all process finished
-May-23 23:36:00.878 [main] DEBUG nextflow.Session - Session await > all barriers passed
-May-23 23:36:00.907 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (1)
-May-23 23:36:00.944 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=8.2s; failedDuration=0ms; cachedDuration=0ms]
-May-23 23:36:00.963 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-May-23 23:36:00.986 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: fastq-dump: command not found
+
+Work dir:
+  /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/69/e8a43dcec31832a7f587c39a458c02
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+May-24 12:35:38.938 [Actor Thread 8] DEBUG nextflow.Session - <<< barrier arrive (process: fastaqDump)
+May-24 12:35:38.939 [main] DEBUG nextflow.Session - Session await > all process finished
+May-24 12:35:38.941 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `fastaqDump (1)` terminated with an error exit status (127)
+May-24 12:35:38.999 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-24 12:35:39.004 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-24 12:35:39.041 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=2; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=37.9s; failedDuration=6ms; cachedDuration=0ms]
+May-24 12:35:39.068 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-24 12:35:39.091 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

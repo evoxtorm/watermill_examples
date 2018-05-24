@@ -37,32 +37,32 @@ process downloadSRA {
 
 //=== EXTRACT/DECOMPRESS ===
 
-process fastaqDump {
-	container 'inutano/sra-toolkit'
+// process fastaqDump {
+// 	container 'bionode/bionode-watermill:dev'
 
-	input: file read from reads
-	output: file '*.fastq.gz' into samples
+// 	input: file read from reads
+// 	output: file '*.fastq.gz' into samples
 
-	"""
-	fastq-dump --split-files --skip-technical --gzip $read
-	"""
+// 	"""
+// 	fastq-dump --split-files --skip-technical --gzip $read
+// 	"""
 
-}
+// }
 
-( samples1,
-  samples2 ) = samples.into(2)
+// ( samples1,
+//   samples2 ) = samples.into(2)
 
 
-process gunzipit {
-	container 'biodckrdev/htslib'
+// process gunzipit {
+// 	container 'bionode/bionode-watermill:dev'
 
-	input: file referenceGenome from referenceGenomeGz1
-	output: file 'reference.genomic.fna' into referenceGenomes
+// 	input: file referenceGenome from referenceGenomeGz1
+// 	output: file 'reference.genomic.fna' into referenceGenomes
 
-	"""
-	bgzip -d $referenceGenome --stdout > reference.genomic.fna
-	"""
-}
+// 	"""
+// 	gunzip -c $referenceGenome > reference.genomic.fna
+// 	"""
+// }
 
 // // index using first bwa
 
