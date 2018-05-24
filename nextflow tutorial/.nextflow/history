@@ -18,3 +18,4 @@
 2018-05-24 12:05:34	28.1s	friendly_noether	ERR	b28a25c78f229e1b1c77b1c60d4f438b	be1f4822-c59f-467e-bd47-2f5814ed60aa	nextflow run twomappersnf.nf
 2018-05-24 12:35:10	29.1s	tiny_ramanujan	ERR	b28a25c78f229e1b1c77b1c60d4f438b	9cee94a1-ca32-4c60-8333-f0f841bcbb48	nextflow run twomappersnf.nf
 2018-05-24 12:40:18	17.7s	fervent_cori	OK	89d185d33ed11b052e5bc4a5f5fcdb67	25fefdd9-66ab-4b7f-9cdd-0e677790718e	nextflow run twomappersnf.nf
+2018-05-24 18:43:45	31.7s	friendly_stone	ERR	29e0b08f5aeec9c52a754cd0a64fad29	231b61de-befa-453e-aa2e-e521ae9d86bc	nextflow run twomappersnf.nf
