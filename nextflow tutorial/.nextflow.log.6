@@ -1,97 +1,42 @@
-May-24 00:15:53.629 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run twomappersnf.nf
-May-24 00:15:53.869 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
-May-24 00:15:53.893 [main] INFO  nextflow.cli.CmdRun - Launching `twomappersnf.nf` [awesome_khorana] - revision: 49b868f6be
-May-24 00:15:54.085 [main] DEBUG nextflow.Session - Session uuid: b1ea9f2b-2dd9-4efe-a9c6-fa950311b52d
-May-24 00:15:54.085 [main] DEBUG nextflow.Session - Run name: awesome_khorana
-May-24 00:15:54.089 [main] DEBUG nextflow.Session - Executor pool size: 4
-May-24 00:15:54.108 [main] DEBUG nextflow.cli.CmdRun - 
-  Version: 0.29.0 build 4803
-  Modified: 24-04-2018 08:09 UTC (13:39 IDT)
-  System: Linux 4.15.0-21-generic
-  Runtime: Groovy 2.4.15 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_171-b11
-  Encoding: UTF-8 (UTF-8)
-  Process: 16094@evoxtorm-Inspiron-3542 [127.0.1.1]
-  CPUs: 4 - Mem: 3.8 GB (376.7 MB) - Swap: 2 GB (1.9 GB)
-May-24 00:15:54.245 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work
-
-May-24 00:15:54.245 [main] DEBUG nextflow.Session - Work-dir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work [null]
-May-24 00:15:54.246 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/bin
-May-24 00:15:54.505 [main] DEBUG nextflow.Session - Session start invoked
-May-24 00:15:54.521 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
-May-24 00:15:54.523 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
-May-24 00:15:55.121 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-May-24 00:15:55.342 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-24 00:15:55.343 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-24 00:15:55.359 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-24 00:15:55.364 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
-May-24 00:15:55.374 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
-May-24 00:15:55.390 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
-May-24 00:15:55.391 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-May-24 00:15:55.395 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
-May-24 00:15:55.551 [main] DEBUG nextflow.Session - >>> barrier register (process: downloadReference)
-May-24 00:15:55.557 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > downloadReference -- maxForks: 4
-May-24 00:15:56.131 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-24 00:15:56.132 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-24 00:15:56.132 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-24 00:15:56.136 [main] DEBUG nextflow.Session - >>> barrier register (process: downloadSRA)
-May-24 00:15:56.136 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > downloadSRA -- maxForks: 4
-May-24 00:15:56.150 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-24 00:15:56.154 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-24 00:15:56.159 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-24 00:15:56.178 [main] DEBUG nextflow.Session - >>> barrier register (process: fastaqDump)
-May-24 00:15:56.178 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastaqDump -- maxForks: 4
-May-24 00:15:56.204 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
-May-24 00:15:56.205 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
-May-24 00:15:56.205 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
-May-24 00:15:56.206 [main] DEBUG nextflow.Session - >>> barrier register (process: gunzipit)
-May-24 00:15:56.207 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > gunzipit -- maxForks: 4
-May-24 00:15:56.214 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-May-24 00:15:56.214 [main] DEBUG nextflow.Session - Session await
-May-24 00:15:56.293 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Process `downloadReference (1)` uses an executable container -- This feature has been deprecated and will be removed in a future release
-May-24 00:15:56.345 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-May-24 00:15:56.353 [Task submitter] INFO  nextflow.Session - [28/fe5e96] Submitted process > downloadReference (1)
-May-24 00:15:56.404 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-May-24 00:15:56.412 [Task submitter] INFO  nextflow.Session - [7e/c76e80] Submitted process > downloadSRA (1)
-May-24 00:16:05.574 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: downloadReference (1); status: COMPLETED; exit: 0; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/28/fe5e9670b03e1b99848ca0d8199519]
-May-24 00:16:05.615 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: downloadReference)
-May-24 00:16:05.665 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-May-24 00:16:05.666 [Task submitter] INFO  nextflow.Session - [25/f6c5bd] Submitted process > gunzipit (1)
-May-24 00:16:05.717 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: gunzipit (1); status: COMPLETED; exit: 1; error: -; workDir: /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/25/f6c5bd948eee521e796b04356087e0]
-May-24 00:16:05.791 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'gunzipit (1)'
-
-Caused by:
-  Process `gunzipit (1)` terminated with an error exit status (1)
-
-Command executed:
-
-  gunzip -c reference.genomic.fna.gz > reference.genomic.fna
-
-Command exit status:
-  1
-
-Command output:
-  (empty)
-
-Command error:
-  
-  gzip: reference.genomic.fna.gz: not in gzip format
-
-Work dir:
-  /home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/25/f6c5bd948eee521e796b04356087e0
-
-Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
-May-24 00:16:05.799 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `gunzipit (1)` terminated with an error exit status (1)
-May-24 00:16:05.812 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: gunzipit)
-May-24 00:16:05.854 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
-[process] fastaqDump
-  status=ACTIVE
-  port 0: (queue) OPEN; channel: read
-  port 1: (cntrl) OPEN; channel: $
-
-May-24 00:16:05.860 [main] DEBUG nextflow.Session - Session await > all process finished
-May-24 00:16:05.860 [main] DEBUG nextflow.Session - Session await > all barriers passed
-May-24 00:16:05.861 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
-May-24 00:16:05.885 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (1)
-May-24 00:16:05.921 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=2; ignoredCount=0; cachedCount=0; succeedDuration=9.1s; failedDuration=3ms; cachedDuration=0ms]
-May-24 00:16:05.942 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
-May-24 00:16:05.958 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+May-24 13:24:58.857 [main] DEBUG nextflow.cli.Launcher - $> /home/evoxtorm/nextflow run twomappersnf.nf -with-docker
+May-24 13:24:59.540 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.29.0
+May-24 13:24:59.650 [main] INFO  nextflow.cli.CmdRun - Launching `twomappersnf.nf` [awesome_blackwell] - revision: 89d185d33e
+May-24 13:24:59.854 [main] DEBUG nextflow.config.ConfigBuilder - Enabling execution in Docker container as requested by cli option `-with-docker -`
+May-24 13:24:59.870 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: You have requested to run with Docker but no image were specified
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
+	at nextflow.config.ConfigBuilder.configContainer(ConfigBuilder.groovy:541)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:157)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.config.ConfigBuilder.configRunOptions(ConfigBuilder.groovy:513)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:157)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.config.ConfigBuilder.configObject(ConfigBuilder.groovy:573)
+	at nextflow.config.ConfigBuilder.build(ConfigBuilder.groovy:583)
+	at nextflow.script.ScriptRunner.<init>(ScriptRunner.groovy:116)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:207)
+	at nextflow.cli.Launcher.run(Launcher.groovy:428)
+	at nextflow.cli.Launcher.main(Launcher.groovy:582)

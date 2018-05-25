@@ -1,0 +1,2 @@
+fastq-dump: /build/ncbi-vdb-0lxjhd/ncbi-vdb-2.8.2-2+dfsg/libs/vfs/resolver.c:3691: VResolverQuery: Assertion `rc == ro' failed.
+/home/evoxtorm/Desktop/watermill_examples/nextflow tutorial/work/03/73d1b2c3d1f72472ad0bef40686cb7/.command.sh: line 2: 11157 Aborted                 (core dumped) fastq-dump --split-files --skip-technical --gzip ERR045788.sra

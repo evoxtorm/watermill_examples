@@ -38,7 +38,7 @@ process downloadSRA {
 // === EXTRACT/DECOMPRESS ===
 
 process fastaqDump {
-	container 'inutano/sra-toolkit'
+	// container 'inutano/sra-toolkit'
 
 	input: file read from reads
 	output: file '*.fastq.gz' into samples
