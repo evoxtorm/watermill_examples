@@ -53,16 +53,16 @@ process fastaqDump {
   samples2 ) = samples.into(2)
 
 
-// process gunzipit {
-// 	container 'bionode/bionode-watermill:dev'
+process gunzipit {
+	//container 'bionode/bionode-watermill:dev'
 
-// 	input: file referenceGenome from referenceGenomeGz1
-// 	output: file 'reference.genomic.fna' into referenceGenomes
+	input: file referenceGenome from referenceGenomeGz1
+	output: file 'reference.genomic.fna' into referenceGenomes
 
-// 	"""
-// 	gunzip -c $referenceGenome > reference.genomic.fna
-// 	"""
-// }
+	"""
+	gunzip -c $referenceGenome > reference.genomic.fna
+	"""
+}
 
 // // index using first bwa
 
