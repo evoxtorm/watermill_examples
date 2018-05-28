@@ -7,6 +7,24 @@ species = [
   ]
 ]
 
+
+BASE_PATH = System.getProperty('user.dir') + '/'
+BIN = BASE_PATH + '../bin'
+ADAPTERS = BASE_PATH + '../adapters'
+TMPDIR = 'kmc-temp'
+
+KMERSIZE = 20
+PLOTXMAX = 60
+PLOTYMAX = 1200000
+MINCOVERAGE = 5
+
+THREADS = 20
+MEMORYGB = 4
+
+echo true
+
+// ==== Download ====
+
 process downloadReference {
   container true
 
@@ -64,23 +82,53 @@ process gunzipit {
 	"""
 }
 
+( referenceGenomes1,
+  referenceGenomes2 ) = referenceGenomes.into(2)
+
 // // index using first bwa
 
-// process indexReferenceBwa {
-// 	container 
+process indexReferenceBwa {
+	//container 
 
-// 	input: file reference from referenceGenomeGz2
-// 	output: file '*.gz.*' into referenceIndexes
+	input: file reference from referenceGenomeGz2
+	output: file '*.gz.*' into referenceIndexes
 
-// 	"""
-// 	bwa index $reference
-// 	"""
-// }
+	"""
+	bwa index $reference -p bwa_index
+	"""
+}
 
-// process indexReferenceBowtie2 {
+( referenceIndexes1,
+  referenceIndexes2 ) = referenceIndexes.into(2)
 
 
-// 	input: file reference from referenceGenomeGz3
-// 	output: file '*.gz.*' into 
-// }
+// Bowtie 2
+ process indexReferenceBowtie2 {
 
+ 	input: file reference from referenceGenomeGz3
+ 	output: file '*.gz.*' into referenceIndexes
+
+ 	"""
+ 	bowtie2-build -q $reference $referenceIndexes
+ 	"""
+ }
+
+ //Mappers with bwa
+
+ process bwaMapper {
+
+ 	input:
+    	file reference from referenceGenomeGz3
+    	file referenceIndex from referenceIndexes1
+    	file sample from reads_kmc
+  	output: file 'reads.sam' into readsUnsorted_kmc
+
+
+  	"""
+	bwa mem -t ${THREADS} bwa_index ${input.reference} ${input.sample} > $reads.sam
+	"""
+ }
+
+ // with bowtie2
+
+ process
