@@ -56,7 +56,7 @@ process downloadSRA {
 // === EXTRACT/DECOMPRESS ===
 
 process fastaqDump {
-	// container 'inutano/sra-toolkit'
+	container 'bionode/bionode-watermill:dev'
 
 	input: file read from reads
 	output: file '*.fastq.gz' into samples
@@ -72,7 +72,7 @@ process fastaqDump {
 
 
 process gunzipit {
-	//container 'bionode/bionode-watermill:dev'
+	container 'bionode/bionode-watermill:dev'
 
 	input: file referenceGenome from referenceGenomeGz1
 	output: file 'reference.genomic.fna' into referenceGenomes
@@ -88,7 +88,7 @@ process gunzipit {
 // // index using first bwa
 
 process indexReferenceBwa {
-	//container 
+	container 'bionode/bionode-watermill:dev'
 
 	input: file reference from referenceGenomeGz2
 	output: file '*.gz.*' into referenceIndexes
@@ -105,6 +105,8 @@ process indexReferenceBwa {
 // Bowtie 2
  process indexReferenceBowtie2 {
 
+ 	container 'bionode/bionode-watermill:dev'
+
  	input: file reference from referenceGenomeGz3
  	output: file '*.gz.*' into referenceIndexes
 
@@ -116,19 +118,54 @@ process indexReferenceBwa {
  //Mappers with bwa
 
  process bwaMapper {
+ 	container 'bionode/bionode-watermill:dev'
 
  	input:
     	file reference from referenceGenomeGz3
     	file referenceIndex from referenceIndexes1
     	file sample from reads_kmc
-  	output: file 'reads.sam' into readsUnsorted_kmc
+  	output: file 'bwa_output.sam' into readsUnsorted_kmc
 
 
   	"""
-	bwa mem -t ${THREADS} bwa_index ${input.reference} ${input.sample} > $reads.sam
+	bwa mem -t ${THREADS} bwa_index ${input.reference} ${input.sample} > $bwa_output.sam
 	"""
  }
 
  // with bowtie2
 
- process
+ process bowtieMapper {
+ 	container 'bionode/bionode-watermill:dev'
+
+ 	input: 
+ 		referenceGenomes1 from referenceGenomes
+ 		referenceGenomes2 from  referenceGenomes
+ 	output: file 'bowtie2_output.sam' into readsUnsorted_kmc
+
+ 	"""
+ 	bowtie2 -p ${THREADS} -x bowtie_index -1 ${input.referenceGenomes1} -2 ${input.referenceGenomes2} -S $bowtie2_output.sam
+ 	"""
+ }
+
+ // === PIPELINE ===
+
+ process pipeline {
+ 	container 'bionode/bionode-watermill:dev'
+
+ 	"""
+ 	#!/usr/bin/env node
+
+ 		junction(
+      	getReference,
+      	join(getSamples,fastqDump)
+  	),
+  	gunzipIt,
+  	fork(
+    	join(indexReferenceBwa, bwaMapper),
+    	join(indexReferenceBowtie2, bowtieMapper)
+  	)
+	)
+
+	pipeline().then(results => console.log('PIPELINE RESULTS: ', results))
+	"""
+ }
