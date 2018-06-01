@@ -1,0 +1,10 @@
+sraFile:
+  class: File
+  path: data/ERR045788.sra
+
+out_fastq_prefix: _OUT_FASTQ_PREFIX_
+ 
+
+# input_vcf_file: 
+#     class: File
+#     path: data/chr20.vcf.gz

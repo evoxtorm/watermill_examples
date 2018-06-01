@@ -3,7 +3,3 @@ dockerPull: inutano/sra-toolkit
 dockerFile: >
   $import: Dockerfile
 
-
-input_vcf_file: 
-    class: File
-    path: data/chr20.vcf.gz

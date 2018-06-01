@@ -2,8 +2,9 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-requirements:
-  - $import: fastq-docker.yml
+hints:
+  DockerRequirement:
+    dockerPull: inutano/sra-toolkit
 
 inputs:
   sraFile:
@@ -12,13 +13,10 @@ inputs:
       position: 1
 
 
-baseCommand: [fastq-dump, --split-files, --skip-technical, ., --gzip]
+baseCommand: [fastq-dump, --split-files, --skip-technical, --gzip]
+
 outputs:
-  zippedFile:
-    type: File
-    outputBinding:
-      glob: '*.zip'
-  report:
-    type: Directory
-    outputBinding:
-      glob: .
+  fastq:
+    type: stdout
+
+stdout: $(inputs.out_fastq_prefix).fastq
