@@ -2,4 +2,6 @@
 
 ## Summary
 
-This repo contains all the example which I've practised while learning about bionode-watermill and nextflow
+This repo contains all the example which I've practised while learning about bionode-watermill,nextflow, redux and CWL(common workflow Language).
+
+
