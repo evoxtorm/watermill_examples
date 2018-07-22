@@ -3,12 +3,12 @@
     "mode": "NORMAL",
     "vertices": [
       {
-        "_id": "a022b2d1413314aa38d4facdef16cc947b27c84e17dcf4a5c540ec96ed50298e",
+        "_id": "7d66d2ebe08b97defb8663335659522f8f086be34351a5069a5c2b227fe14186",
         "_type": "vertex",
         "values": {
           "type": "collection/add-output",
-          "name": "Capitalize alphabet",
-          "resolvedOutput": "/home/evoxtorm/Desktop/watermill_examples/Bionode-watermill/data/a022b2d/alphabet.sink.txt",
+          "name": "Uppercase",
+          "resolvedOutput": "/home/evoxtorm/Desktop/watermill_examples/Bionode-watermill/data/7d66d2e/alphabet.output.txt",
           "params": {}
         }
       }
